@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import "./index.css";
+import Popular from "./components/Popular";
 
 /*
   state
@@ -12,7 +13,13 @@ import "./index.css";
 
 class App extends React.Component {
   render() {
-    return <div>Hello World!</div>;
+    return (
+      <div className="light">
+        <div className="container">
+          <Popular />
+        </div>
+      </div>
+    );
   }
 }
 
