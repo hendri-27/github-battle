@@ -18,16 +18,10 @@ const Results = React.lazy(() => import("./components/Results"));
 */
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      theme: "light",
-    };
-
-    this.toggleTheme = this.toggleTheme.bind(this);
-  }
-  toggleTheme() {
+  state = {
+    theme: "light",
+  };
+  toggleTheme = () => {
     this.setState(({ theme }) => ({
       theme: theme === "light" ? "dark" : "light",
     }));
